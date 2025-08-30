@@ -5,13 +5,13 @@ using UnityEngine;
 public class componentes3 : MonoBehaviour 
 {
     //started is called before the first frame updte
-    private void Start()
+    void Start()
     {
         
     }
 
     //update is called once per frame
-    private void Update()
+    void Update()
     {
 
     }
