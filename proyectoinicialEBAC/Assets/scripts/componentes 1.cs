@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class componentes1 : MonoBehaviour 
 {
+    public static GameObject miObjeto;
     //started is called before the first frame updte
-    private void Start()
+    void Start()
     {
         
     }
 
     //update is called once per frame
-    private void Update()
+    void Update()
     {
 
     }
