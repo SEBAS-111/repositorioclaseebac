@@ -47,7 +47,7 @@ public class CrearCuboDeCero : MonoBehaviour
         boxcollider.center = new Vector3(0.5f, 0.5f, 0.5f);
         objtoSpawn.AddComponent<MeshCollider>();
         var meshRendererMaterial = objtoSpawn.GetComponent<MeshRenderer>().material;
-        meshRendererMaterial.color = Color.white;
+        meshRendererMaterial.color = Color.black;
         objtoSpawn.transform.position = Vector3.one;
     }
 
