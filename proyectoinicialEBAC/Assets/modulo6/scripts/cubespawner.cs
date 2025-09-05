@@ -1,20 +1,25 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class cubespawner
+public class cubespawner : MonoBehaviour 
 {
+    public GameObject prefabcubo;
+    public List<GameObject> listaDeCubos;
+    public float FactorDeEscalamiento;
+    public int numcubos = 0;
 
     //start is called before the first frame update
     void Start()
     {
-
+        listaDeCubos = new List<GameObject>();
     }
 
     //update is called once per frame
-    void update()
+    void Update()
     {
-
+        numcubos++;
+        GameObject tempGameObject = Instantiate<GameObject>(prefabcubo);
+        tempGameObject.name = "cubonumero" + numcubos;
     }
 }
