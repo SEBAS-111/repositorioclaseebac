@@ -21,5 +21,28 @@ public class cubespawner : MonoBehaviour
         numcubos++;
         GameObject tempGameObject = Instantiate<GameObject>(prefabcubo);
         tempGameObject.name = "cubonumero" + numcubos;
+        Color c = new Color(Random.value,Random.value,Random.value);
+        tempGameObject.GetComponent<MeshRenderer>().material.color = c;
+        tempGameObject.transform.position = Random.insideUnitSphere;
+
+        listaDeCubos.Add(tempGameObject);
+        List<GameObject> objetosParaEliminar = new List<GameObject>();
+        foreach (GameObject go in listaDeCubos)
+        {
+            float escala = go.transform.localScale.x;
+            escala *= FactorDeEscalamiento;
+            go.transform.localScale = Vector3.one * escala;
+
+            if (escala <= 0.1)
+            {
+                objetosParaEliminar.Add(go);
+            }
+        }
+
+        foreach (GameObject go in objetosParaEliminar)
+        {
+            listaDeCubos.Remove(go);
+            Destroy(go);
+        }
     }
 }
