@@ -36,18 +36,18 @@ public class CrearCuboDeCero : MonoBehaviour
     {
         objtoSpawn = new GameObject("Nuestro Primer Cubo");
         objtoSpawn.AddComponent<MeshFilter>();
-        var meshFilter = objtoSpawn.GetComponent<MeshFilter>().mesh;
-        meshFilter.Clear();
-        meshFilter.vertices = vertices;
-        meshFilter.triangles = triangulos;
-        meshFilter.Optimize();
-        meshFilter.RecalculateNormals();
+        var MeshFilter = objtoSpawn.AddComponent<MeshFilter>().mesh;
+        MeshFilter.Clear();
+        MeshFilter.vertices = vertices;
+        MeshFilter.triangles = triangulos;
+        MeshFilter.Optimize();
+        MeshFilter.RecalculateNormals();
         objtoSpawn.AddComponent<BoxCollider>();
-        var boxcollider = objtoSpawn.GetComponent<BoxCollider>();
-        boxcollider.center = new Vector3(0.5f, 0.5f, 0.5f);
-        objtoSpawn.AddComponent<MeshCollider>();
-        Material meshRendererMaterial = objtoSpawn.GetComponent<MeshRenderer>().material;
-        meshRendererMaterial.color = Color.black;
+        var boxCollider = objtoSpawn.AddComponent<BoxCollider>();
+        boxCollider.center = new Vector3(0.5f, 0.5f, 0.5f);
+        objtoSpawn.AddComponent<MeshRenderer>();
+        var MeshRendererMaterial = objtoSpawn.GetComponent<MeshRenderer>().material;
+        MeshRendererMaterial.color = Color.white;
         objtoSpawn.transform.position = Vector3.one;
     }
 
