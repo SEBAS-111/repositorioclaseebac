@@ -2,40 +2,38 @@ using UnityEngine;
 
 public class cubodesdeondeseable : MonoBehaviour
 {
-
-    private GameObject cuboGenerado; // Variable para almacenar la referencia del cubo
+    public GameObject cuboPrefab; 
+    private GameObject instanciaCubo;
 
     void OnEnable()
     {
-        GenerarCubo();
+        
+        Debug.Log("OnEnable: ¡Activando el script y generando el cubo!");
+
+        if (cuboPrefab != null)
+        {
+            
+            instanciaCubo = Instantiate(cuboPrefab, transform.position, Quaternion.identity);
+            Debug.Log("Cubo generado en la posición: " + transform.position);
+        }
+        else
+        {
+            Debug.LogError("No se ha asignado un cuboPrefab al script.");
+        }
     }
 
     void OnDisable()
     {
-        DestruirCubo();
-    }
+        
+        Debug.Log("OnDisable: ¡Desactivando el script y destruyendo el cubo!");
 
-    void GenerarCubo()
-    {
-        cuboGenerado = GameObject.CreatePrimitive(PrimitiveType.Cube);
-        cuboGenerado.name = "Cubo Generado";
-
-        cuboGenerado.transform.position = transform.position;
-
-
-        Debug.Log("Cubo generado.");
-    }
-
-    void DestruirCubo()
-    {
-        // Destruye el cubo si existe
-        if (cuboGenerado != null)
+        if (instanciaCubo != null)
         {
-            Destroy(cuboGenerado);
+            
+            Destroy(instanciaCubo);
             Debug.Log("Cubo destruido.");
         }
     }
-
     void Start()
     {
 
