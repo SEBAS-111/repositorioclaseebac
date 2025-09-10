@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class cubodesdeondeseable : MonoBehaviour
 {
-
+    public GameObject cuboPlantilla;
     private GameObject cuboGenerado; // Variable para almacenar la referencia del cubo
 
     void OnEnable()

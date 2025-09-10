@@ -34,6 +34,7 @@ public class CrearCuboDeCero : MonoBehaviour
     //started is called before the first frame updte
     void Start()
     {
+
         objtoSpawn = new GameObject("Nuestro Primer Cubo");
         objtoSpawn.AddComponent<MeshFilter>();
         var meshFilter = objtoSpawn.GetComponent<MeshFilter>().mesh;
@@ -43,12 +44,13 @@ public class CrearCuboDeCero : MonoBehaviour
         meshFilter.Optimize();
         meshFilter.RecalculateNormals();
         objtoSpawn.AddComponent<BoxCollider>();
-        var boxcollider = objtoSpawn.GetComponent<BoxCollider>();
-        boxcollider.center = new Vector3(0.5f, 0.5f, 0.5f);
-        objtoSpawn.AddComponent<MeshCollider>();
-        Material meshRendererMaterial = objtoSpawn.GetComponent<MeshRenderer>().material;
+        var BoxCollider = objtoSpawn.GetComponent<BoxCollider>();
+        BoxCollider.center = new Vector3(0.5f, 0.5f, 0.5f);
+        objtoSpawn.AddComponent<MeshRenderer>();
+        var meshRendererMaterial = objtoSpawn.GetComponent<MeshRenderer>().material;
         meshRendererMaterial.color = Color.black;
         objtoSpawn.transform.position = Vector3.one;
+
     }
 
     //update is called once per frame
