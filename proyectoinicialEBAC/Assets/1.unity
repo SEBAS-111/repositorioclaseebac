@@ -188,15 +188,16 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 714658682}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 577f1f3df2c2d294794f070593ea8d6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabcubo: {fileID: 0}
+  PreFabcubo: {fileID: 0}
   listaDeCubos: []
   FactorDeEscalamiento: 0
   numcubos: 0
+  numCubos: 0
 --- !u!1 &864281246
 GameObject:
   m_ObjectHideFlags: 0
@@ -584,7 +585,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1049696262}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5a682b6241d861f4e83b65acbc17afbc, type: 3}
   m_Name: 
@@ -654,6 +655,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 650023296593133759, guid: 8ed8e3f0ae5017749b15acaf9a0f41c9, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1668490056834445200, guid: 8ed8e3f0ae5017749b15acaf9a0f41c9, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2532741752988366588, guid: 8ed8e3f0ae5017749b15acaf9a0f41c9, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2999505195684538409, guid: 8ed8e3f0ae5017749b15acaf9a0f41c9, type: 3}
       propertyPath: m_Name
       value: Cube
