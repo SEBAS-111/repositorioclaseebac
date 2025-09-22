@@ -625,8 +625,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3af77da4a2ffd52429ab7af9527e9c7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cube: {fileID: 0}
-  capsule: {fileID: 0}
+  capsule: {fileID: 2112372920}
+  cube: {fileID: 714658682}
 --- !u!1001 &1431374386
 PrefabInstance:
   m_ObjectHideFlags: 0
