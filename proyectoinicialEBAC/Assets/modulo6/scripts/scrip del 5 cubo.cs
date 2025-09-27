@@ -8,28 +8,31 @@ public class scripdel5cubo : MonoBehaviour
     public GameObject cube2;
     public Color colorVerdadero = Color.white;
     public Color colorFalso = Color.black;
-    private bool resultado;
-    private bool resultados;
+    bool isTrue;
+    private Renderer objectRenderer;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+
+        objectRenderer = GetComponent<Renderer>();
+
+
+    }
+    void FixedUpdate()
+    {
+
+        if (sphere.GetComponent<Go3>() && cube2.GetComponent<Go4>())
+        { 
+            objectRenderer.material.color = colorVerdadero;
+            isTrue = true;
         
-        Debug.Log(sphere.GetComponent<Go3>().resultado);
-        Debug.Log (cube2.GetComponent<Go4>().resultados);
-
-        resultado = true;
-        resultados = false;
-
-        if (resultado || resultados)
-        {
-            Debug.Log("la operacion dio verdadero");
         }
         else
         {
-            Debug.Log("la operacion dio como falso");
+            objectRenderer.material.color = colorFalso;
+            isTrue = false;
         }
-
 
     }
 

@@ -8,30 +8,13 @@ public class Go4 : MonoBehaviour
     public GameObject capsule;
     public GameObject cube;
     bool esActivo;
-    bool isTrue;
     public Color colorVerdadero = Color.white;
     public Color colorFalso = Color.black;
-    public bool resultados = false;
- 
     private Renderer objectRenderer;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        Debug.Log(capsule.GetComponent<vairablecomoverdadera>().esActivo);
-        Debug.Log(cube.GetComponent<colorChanger>().isTrue);
-
-        esActivo = true;
-        isTrue = false;
-
-        if (esActivo || isTrue)
-        {
-            Debug.Log("la operacion dio resultado verdadero");
-        }
-        else
-        {
-            Debug.Log("la operacion dio como resultado falso");
-        }
 
         objectRenderer = GetComponent<Renderer>();
     }
@@ -39,13 +22,16 @@ public class Go4 : MonoBehaviour
     void FixedUpdate()
     {
 
-        if (esActivo || isTrue)
+
+        if (capsule.GetComponent<vairablecomoverdadera>().esActivo || cube.GetComponent<colorChanger>().isTrue)
         {
             objectRenderer.material.color = colorVerdadero;
+            esActivo = true;
         }
         else
         {
             objectRenderer.material.color = colorFalso;
+            esActivo = false;
         }
     }
 
@@ -55,8 +41,4 @@ public class Go4 : MonoBehaviour
         
     }
 
-    public static implicit operator Go4(bool v)
-    {
-        throw new NotImplementedException();
-    }
 }
