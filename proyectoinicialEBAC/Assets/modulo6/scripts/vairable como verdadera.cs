@@ -18,7 +18,7 @@ public class vairablecomoverdadera : MonoBehaviour
 
     void FixedUpdate()
     {
-
+        ToggleBoolean();
         if (esActivo)
         {
             objectRenderer.material.color = colorVerdadero;

@@ -244,7 +244,6 @@ MonoBehaviour:
   cube: {fileID: 714658682}
   colorVerdadero: {r: 1, g: 1, b: 1, a: 1}
   colorFalso: {r: 0, g: 0, b: 0, a: 1}
-  resultados: 0
 --- !u!1001 &475732478
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -880,7 +879,6 @@ MonoBehaviour:
   cube: {fileID: 714658682}
   colorVerdadero: {r: 1, g: 1, b: 1, a: 1}
   colorFalso: {r: 0, g: 0, b: 0, a: 1}
-  resultado: 1
 --- !u!1001 &1431374386
 PrefabInstance:
   m_ObjectHideFlags: 0

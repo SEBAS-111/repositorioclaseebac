@@ -7,7 +7,7 @@ public class Go3 : MonoBehaviour
 {
     public GameObject capsule;
     public GameObject cube;
-    bool isTrue;
+    public bool isTrue;
     public Color colorVerdadero = Color.white;
     public Color colorFalso = Color.black;
 

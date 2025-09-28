@@ -22,7 +22,7 @@ public class scripdel5cubo : MonoBehaviour
     void FixedUpdate()
     {
 
-        if (sphere.GetComponent<Go3>() && cube2.GetComponent<Go4>())
+        if (sphere.GetComponent<Go3>().isTrue && cube2.GetComponent<Go4>().esActivo)
         { 
             objectRenderer.material.color = colorVerdadero;
             isTrue = true;

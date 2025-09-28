@@ -19,7 +19,7 @@ public class colorChanger : MonoBehaviour
 
     void FixedUpdate()
     {
-        
+        ToggleBoolean();
         if (isTrue)
         {
             objectRenderer.material.color = colorVerdadero;
