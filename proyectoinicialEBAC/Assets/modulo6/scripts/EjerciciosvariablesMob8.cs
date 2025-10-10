@@ -38,8 +38,7 @@ public class EjerciciosvariablesMob8 : MonoBehaviour
         Debug.Log(primerNombre);
         Debug.Log(segundiNombre);
         Debug.Log(primerApellido);
-        Debug.Log(misApellidos.Substring(8,15));
-
+        Debug.Log(misApellidos);
 
     }
 
