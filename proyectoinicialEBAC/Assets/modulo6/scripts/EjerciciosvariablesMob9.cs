@@ -27,9 +27,9 @@ public class EjerciciosvariablesMob8 : MonoBehaviour
         string miNombre = "Gonzalo Sebastian";
         string misApellidos = "Sanchez Morales";
         string primerNombre = miNombre.Substring(0, 7);
-        string segundiNombre = miNombre.Substring(9, 17);
+        string segundiNombre = miNombre.Substring(9);
         string primerApellido = misApellidos.Substring(0, 7);
-        string segundoApellido = misApellidos.Substring(9, 15);
+        string segundoApellido = misApellidos.Substring(9);
         string salida = $"mi nombre es: {miNombre} y mis apellidos son {misApellidos}";
         Debug.Log(salida);
         Debug.Log(primerNombre);
