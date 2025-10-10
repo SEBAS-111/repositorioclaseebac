@@ -21,7 +21,7 @@ public class EjerciciosvariablesMob8 : MonoBehaviour
 
         objectRenderer = GetComponent<Renderer>();
 
-       
+
     }
 
     // Update is called once per frame
@@ -52,5 +52,4 @@ public class EjerciciosvariablesMob8 : MonoBehaviour
             Debug.Log("el numero " + miint + "es non");
             objectRenderer.material.color = coloresNon;
         }
-    }
-}
+
