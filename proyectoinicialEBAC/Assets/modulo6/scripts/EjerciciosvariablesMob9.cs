@@ -77,3 +77,7 @@ public class EjerciciosvariablesMob8 : MonoBehaviour
             case "2":
                 Color coloresNon1 = coloresNon;
                 break;
+        }
+
+    }
+}
