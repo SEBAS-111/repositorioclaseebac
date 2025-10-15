@@ -39,6 +39,22 @@ public class EjerciciosvariablesMob8 : MonoBehaviour
         Debug.Log(segundiNombre);
         Debug.Log(primerApellido);
         Debug.Log(misApellidos);
+string modificado = miFlotante.ToString("f4");
+Debug.Log("el numero flotante original es:" +  miFlotante);
+Debug.Log("el numero modificado es:" + modificado);
+
+string miNombre = "Gonzalo Sebastian";
+string misApellidos = "Sanchez Morales";
+string primerNombre = miNombre.Substring(0, 7);
+string segundiNombre = miNombre.Substring(9,17);
+string primerApellido = misApellidos.Substring(0, 7);
+string segundoApellido = misApellidos.Substring(9,15);
+string salida = $"mi nombre es: {miNombre} y mis apellidos son {misApellidos}";
+Debug.Log(salida);
+Debug.Log(primerNombre);
+Debug.Log(segundiNombre);
+Debug.Log(primerApellido);
+Debug.Log(misApellidos);
 
     }
 
@@ -84,3 +100,11 @@ public class EjerciciosvariablesMob8 : MonoBehaviour
 
     }
 }
+switch (valorEntero)
+{
+    case "1":
+        Color colorespar1 = coloresPar;
+        break;
+    case "2":
+        Color coloresNon1 = coloresNon;
+    break;
