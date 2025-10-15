@@ -1,3 +1,5 @@
+using NUnit.Framework.Constraints;
+using System;
 using UnityEngine;
 
 public class EjerciciosvariablesMob8 : MonoBehaviour
@@ -7,6 +9,9 @@ public class EjerciciosvariablesMob8 : MonoBehaviour
     private Renderer objectRenderer;
     public Color coloresPar = Color.white;
     public Color coloresNon = Color.black;
+    private int i;
+    private int e;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -27,15 +32,36 @@ public class EjerciciosvariablesMob8 : MonoBehaviour
         string miNombre = "Gonzalo Sebastian";
         string misApellidos = "Sanchez Morales";
         string primerNombre = miNombre.Substring(0, 7);
-        string segundiNombre = miNombre.Substring(9);
+        string segundiNombre = miNombre.Substring(8);
         string primerApellido = misApellidos.Substring(0, 7);
-        string segundoApellido = misApellidos.Substring(9);
+        string segundoApellido = misApellidos.Substring(8);
         string salida = $"mi nombre es: {miNombre} y mis apellidos son {misApellidos}";
         Debug.Log(salida);
         Debug.Log(primerNombre);
         Debug.Log(segundiNombre);
         Debug.Log(primerApellido);
-        Debug.Log(misApellidos);
+        Debug.Log(segundoApellido);
+
+        int miEntero = 10;
+        float miDecimal = 3.14f;
+        double miDoble = 2.71828;
+        Debug.Log("mi entero es:" + miEntero);
+        Debug.Log("mi decimal es:" + miDecimal);
+        Debug.Log("mi doble es" + miDoble);
+
+
+        char miCaracter;
+        string mistringdehola = "Hola Mundo";
+        miCaracter = mistringdehola[0];
+        miCaracter = mistringdehola[2];
+        miCaracter = mistringdehola[6];
+        miCaracter = mistringdehola[8];
+        Debug.Log(miCaracter);
+        
+
+        string miPalabra = "Esta es oracion de ejemplo del mod8";
+        string palabra1 = miPalabra.Substring(5);
+        Debug.Log(palabra1);
 
     }
 
@@ -56,7 +82,7 @@ public class EjerciciosvariablesMob8 : MonoBehaviour
         int e, i;
         e = 10;
         i = 5;
-        miint = Random.Range(e, i);
+        miint = UnityEngine.Random.Range(e, i);
         if (miint % 2 == 0)
         {
             Debug.Log("el numero " + miint + "es Par");
