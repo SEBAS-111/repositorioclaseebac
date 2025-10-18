@@ -16,10 +16,10 @@ public class EjerciciosvariablesMob8 : MonoBehaviour
     void Start()
     {
         float a, b;
-        float f;
+        int f;
         a = 10;
         b = 5;
-        f = a + b;
+        f = (int)(a + b);
         Debug.Log("el valor de f es:" + f);
 
         objectRenderer = GetComponent<Renderer>();
@@ -42,22 +42,31 @@ public class EjerciciosvariablesMob8 : MonoBehaviour
         Debug.Log(primerApellido);
         Debug.Log(segundoApellido);
 
-        int miEntero = 10;
-        float miDecimal = 3.14f;
-        double miDoble = 2.71828;
-        Debug.Log("mi entero es:" + miEntero);
-        Debug.Log("mi decimal es:" + miDecimal);
-        Debug.Log("mi doble es" + miDoble);
+        string numero1 = "8";
+        string numero2 = "12";
+        int valor1, valor2;
 
+        if (int.TryParse(numero1, out valor1) && int.TryParse(numero2, out valor2))
+        {
+            Debug.Log("El resultado es: " + (valor1 + valor2));
+        }
+        else
+        {
+            Debug.Log("No se pudieron convertir los valores.");
+        }
 
-        char miCaracter;
-        string mistringdehola = "Hola Mundo";
-        miCaracter = mistringdehola[0];
-        miCaracter = mistringdehola[2];
-        miCaracter = mistringdehola[6];
-        miCaracter = mistringdehola[8];
-        Debug.Log(miCaracter);
-        
+        string texto = "Hola mundo";
+        string resultado = "";
+
+        for (int i = 0; i < texto.Length; i++)
+        {
+            if (i % 2 == 0)
+            {
+                resultado += texto[i];
+            }
+        }
+        Debug.Log("Caracteres en índice par: " + resultado);
+
 
         string miPalabra = "Esta es oracion de ejemplo del mod8";
         string palabra1 = miPalabra.Substring(5);
