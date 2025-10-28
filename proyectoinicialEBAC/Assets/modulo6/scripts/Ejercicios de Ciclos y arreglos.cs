@@ -43,7 +43,7 @@ public class EjerciciosdeCiclosyarreglos : MonoBehaviour
         {
             for(int j = 0; j < miMatriz.GetLength(1); j++)
             {
-                resultado[1] += miMatriz[i, j] * miVector[j];
+                resultado[i] += miMatriz[i, j] * miVector[j];
             }
         }
 
