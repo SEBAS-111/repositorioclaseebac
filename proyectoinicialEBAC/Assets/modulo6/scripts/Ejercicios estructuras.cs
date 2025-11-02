@@ -38,6 +38,9 @@ public class Ejerciciosestructuras : MonoBehaviour
         HashSet<T> HashSetSinDuplicados = listaConDuplicados.Distinct().ToHashSet();
         return HashSetSinDuplicados;
     }
+
+    Queue<string> colaStrings = new Queue<string>();
+    Stack<string> pilaString = new Stack<string>();
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -60,6 +63,35 @@ public class Ejerciciosestructuras : MonoBehaviour
 
         Debug.Log("lista original con Strings repetidos:" + string.Join(",", stringsRepetidos));
         Debug.Log("HashSet resultante con Strings unicos:" + string.Join(",", stringsUnicos));
+
+
+        colaStrings.Enqueue("proyectiles 1");
+        colaStrings.Enqueue("proyectiles 2");
+        colaStrings.Enqueue("proyectiles 3");
+        colaStrings.Enqueue("proyectiles 4");
+        colaStrings.Enqueue("proyectiles 5");
+        Debug.Log(colaStrings.Peek());
+        colaStrings.Dequeue();
+        Debug.Log(colaStrings.Peek());
+        colaStrings.Dequeue();
+        Debug.Log(colaStrings.Peek());
+        colaStrings.Dequeue();
+        Debug.Log(colaStrings.Peek());
+
+
+        pilaString.Push("As");
+        pilaString.Push("cincoEspadas");
+        pilaString.Push("tresCorazones");
+        pilaString.Push("CuatroTreboles");
+        pilaString.Push("ReyEspadas");
+        Debug.Log(pilaString.Peek());
+        pilaString.Pop();
+        Debug.Log(pilaString.Peek());
+        pilaString.Pop();
+        Debug.Log(pilaString.Peek());
+        pilaString.Pop();
+        Debug.Log(pilaString.Peek());
+        pilaString.Pop();
     }
 
     // Update is called once per frame
