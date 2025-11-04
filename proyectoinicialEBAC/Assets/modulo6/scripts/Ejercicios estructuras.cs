@@ -33,11 +33,9 @@ public class Ejerciciosestructuras : MonoBehaviour
         return arregloOredenado;
     }
 
-    public HashSet<T> EliminarDuplicadosLinq<T>(List<T> listaConDuplicados)
-    {
-        HashSet<T> HashSetSinDuplicados = listaConDuplicados.Distinct().ToHashSet();
-        return HashSetSinDuplicados;
-    }
+    Stack<string> pilaNombre = new Stack<string>();
+    Queue<string> colaNombre = new Queue<string>();
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -55,11 +53,19 @@ public class Ejerciciosestructuras : MonoBehaviour
         Debug.Log("Arreglo original:" + string.Join(", ", miArreglo));
         Debug.Log("Arreglo descendente" + string.Join(", ", arregloDescendente));
 
-        List<string> stringsRepetidos = new List<string> { "manzana", "pera", "pera", "banana", "manzana" };
-        HashSet<string> stringsUnicos = EliminarDuplicadosLinq(stringsRepetidos);
+        pilaNombre.Push("Carlos");
+        pilaNombre.Push("Ana");
+        pilaNombre.Push("Luis");
 
-        Debug.Log("lista original con Strings repetidos:" + string.Join(",", stringsRepetidos));
-        Debug.Log("HashSet resultante con Strings unicos:" + string.Join(",", stringsUnicos));
+        while (pilaNombre.Count > 0)
+        {
+            string nombre = pilaNombre.Pop();
+            colaNombre.Enqueue(nombre);
+        }
+        foreach (string nombre in colaNombre)
+        {
+            Debug.Log(nombre);
+        }
     }
 
     // Update is called once per frame
